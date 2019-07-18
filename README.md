@@ -1,4 +1,4 @@
-# FH.Oauth
+# FH.OAuth
 认证中心
 
 IdentityServer4 是为ASP.NET Core 2.系列量身打造的一款基于 OpenID Connect 和 OAuth 2.0 认证框架。
