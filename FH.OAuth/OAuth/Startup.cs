@@ -2,15 +2,18 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 using IdentityServer4;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using OAuth.Data;
 
 namespace OAuth
 {
@@ -40,7 +43,16 @@ namespace OAuth
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             var connectionString = Configuration.GetConnectionString("DefaultConnection");
-            var migrationsAssembly = typeof(Startup).GetType().Assembly.GetName().Name;
+            var migrationsAssembly = typeof(Startup).GetTypeInfo().Assembly.GetName().Name;
+
+            // AspNetIdentity配置
+            services.AddDbContext<ApplicationDbContext>(options =>
+              options.UseSqlServer(connectionString));
+
+            services.AddIdentity<AppUser, AppRole>()
+                .AddEntityFrameworkStores<ApplicationDbContext>()
+                .AddDefaultTokenProviders();
+
             // 配置IdentityServer4 
             // 结合EntityFramework添加用户管理
             /* NuGet
@@ -51,8 +63,8 @@ namespace OAuth
              * Microsoft.EntityFrameworkCore.Tools
              * */
             var builder = services.AddIdentityServer()
-                .AddAspNetIdentity<AppUser>()
-                .AddTestUsers(Config.GetUsers())
+                .AddAspNetIdentity<AppUser>()     // AspNetIdentity账号
+                //.AddTestUsers(Config.GetUsers())  -- 测试环境账号
                 // 添加(clients, resources )配置到数据库
                 .AddConfigurationStore(options =>
                 {
@@ -83,8 +95,10 @@ namespace OAuth
                 );
             }
 
+   
+            // 认证配置
             services.AddAuthentication()
-                // 第三方登录
+                // 第三方Github Google qq  ...
                 //.AddGoogle
                 .AddOpenIdConnect("oidc", options =>
                 {
@@ -103,9 +117,6 @@ namespace OAuth
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            // 添加初始数据
-            SeedData.InitializeDatabase(app);
-
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "6b2a5d1db67d6fbde38ac84e39a784af36f667ae"
+    "signature": "1b6bf694eb3fc611e4100d334d0e98ae6cf534f8"
   },
   "compilationOptions": {
     "defines": [
@@ -25,6 +25,7 @@
       "OAuth/1.0.0": {
         "dependencies": {
           "IdentityServer4": "2.5.0",
+          "IdentityServer4.AspNetIdentity": "2.5.0",
           "IdentityServer4.EntityFramework": "2.5.0",
           "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
@@ -94,6 +95,21 @@
         },
         "compile": {
           "lib/netstandard2.0/IdentityServer4.dll": {}
+        }
+      },
+      "IdentityServer4.AspNetIdentity/2.5.0": {
+        "dependencies": {
+          "IdentityServer4": "2.5.0",
+          "Microsoft.AspNetCore.Identity": "2.2.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/IdentityServer4.AspNetIdentity.dll": {
+            "assemblyVersion": "2.5.0.0",
+            "fileVersion": "2.5.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/IdentityServer4.AspNetIdentity.dll": {}
         }
       },
       "IdentityServer4.EntityFramework/2.5.0": {
@@ -3433,6 +3449,13 @@
       "sha512": "sha512-Ybov47Q7SesEXNNsoesKmEY725owLwaMoGSWsQMnKs4BMzF+dlAHMsQ5mN9dgvGaM5DZyvjc6sV42NxadDP5vA==",
       "path": "identityserver4/2.5.0",
       "hashPath": "identityserver4.2.5.0.nupkg.sha512"
+    },
+    "IdentityServer4.AspNetIdentity/2.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-oD7QSp3oPzcVfSpw7O4ow/CIY5GGjHvai5WUzYl/bKYutlAkyeeA1ecVH5zJ4gS624Ito7e9bkBnjQtsSxsZ3g==",
+      "path": "identityserver4.aspnetidentity/2.5.0",
+      "hashPath": "identityserver4.aspnetidentity.2.5.0.nupkg.sha512"
     },
     "IdentityServer4.EntityFramework/2.5.0": {
       "type": "package",

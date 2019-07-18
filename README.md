@@ -43,3 +43,16 @@ OAuth 就是一种授权机制。数据的所有者告诉系统，同意授权�
   隐藏式（implicit）
   密码式（password）：
   客户端凭证（client credentials）
+
+----------------------------------------------------
+Oauth创建迁移脚本 (EF-Framework迁移脚本)
+
+
+-- PersistedGrantDbContext
+dotnet ef migrations add InitialIdentityServerPersistedGrantDbMigration -c PersistedGrantDbContext -o Data/Migrations/IdentityServer/PersistedGrantDb
+
+-- ConfigurationDbContext
+dotnet ef migrations add InitialIdentityServerConfigurationDbMigration -c ConfigurationDbContext -o Data/Migrations/IdentityServer/ConfigurationDb
+
+-- ApplicationDbContext
+dotnet ef migrations add CreateIdentitySchema -c ApplicationDbContext -o Data/Migrations/Users

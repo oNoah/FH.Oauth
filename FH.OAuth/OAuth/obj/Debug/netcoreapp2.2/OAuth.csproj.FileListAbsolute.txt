@@ -8,7 +8,6 @@ G:\noah\repository\fh.ouath\FH.OAuth\OAuth\bin\Debug\netcoreapp2.2\OAuth.dll
 G:\noah\repository\fh.ouath\FH.OAuth\OAuth\bin\Debug\netcoreapp2.2\OAuth.pdb
 G:\noah\repository\fh.ouath\FH.OAuth\OAuth\bin\Debug\netcoreapp2.2\OAuth.Views.dll
 G:\noah\repository\fh.ouath\FH.OAuth\OAuth\bin\Debug\netcoreapp2.2\OAuth.Views.pdb
-G:\noah\repository\fh.ouath\FH.OAuth\OAuth\obj\Debug\netcoreapp2.2\OAuth.csprojAssemblyReference.cache
 G:\noah\repository\fh.ouath\FH.OAuth\OAuth\obj\Debug\netcoreapp2.2\OAuth.RazorAssemblyInfo.cache
 G:\noah\repository\fh.ouath\FH.OAuth\OAuth\obj\Debug\netcoreapp2.2\OAuth.RazorAssemblyInfo.cs
 G:\noah\repository\fh.ouath\FH.OAuth\OAuth\obj\Debug\netcoreapp2.2\OAuth.TagHelpers.input.cache
@@ -28,3 +27,9 @@ G:\noah\repository\fh.ouath\FH.OAuth\OAuth\obj\Debug\netcoreapp2.2\OAuth.Views.p
 G:\noah\repository\fh.ouath\FH.OAuth\OAuth\obj\Debug\netcoreapp2.2\OAuth.dll
 G:\noah\repository\fh.ouath\FH.OAuth\OAuth\obj\Debug\netcoreapp2.2\OAuth.pdb
 G:\noah\repository\fh.ouath\FH.OAuth\OAuth\obj\Debug\netcoreapp2.2\OAuth.csproj.CopyComplete
+G:\noah\repository\fh.ouath\FH.OAuth\OAuth\obj\Debug\netcoreapp2.2\Razor\Views\Account\LoggedOut.g.cshtml.cs
+G:\noah\repository\fh.ouath\FH.OAuth\OAuth\obj\Debug\netcoreapp2.2\Razor\Views\Account\Login.g.cshtml.cs
+G:\noah\repository\fh.ouath\FH.OAuth\OAuth\obj\Debug\netcoreapp2.2\Razor\Views\Account\Logout.g.cshtml.cs
+G:\noah\repository\fh.ouath\FH.OAuth\OAuth\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Redirect.g.cshtml.cs
+G:\noah\repository\fh.ouath\FH.OAuth\OAuth\obj\Debug\netcoreapp2.2\Razor\Views\Shared\_ScopeListItem.g.cshtml.cs
+G:\noah\repository\fh.ouath\FH.OAuth\OAuth\obj\Debug\netcoreapp2.2\OAuth.csprojAssemblyReference.cache
