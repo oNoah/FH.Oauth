@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using IdentityServer4;
 using Microsoft.AspNetCore.Builder;
@@ -101,7 +102,19 @@ namespace OAuth
             }
             else
             {
-                var cerFile = Path.Combine(Environment.ContentRootPath, Configuration["Certificates:CerPath"]);
+                // windows和linux目录兼容判断
+                var path = "";
+                var cerdDir = Configuration["Certificates:CerdDir"];
+                var cerName = Configuration["Certificates:CerName"];
+                if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+                {
+                    path = cerdDir + "\\" + cerName;
+                }
+                if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+                {
+                    path = cerdDir + "/" + cerName;
+                }
+                var cerFile = Path.Combine(Environment.ContentRootPath, path);
                 builder.AddSigningCredential(new System.Security.Cryptography.X509Certificates.X509Certificate2(
                     cerFile, Configuration["Certificates:Password"])
                 );

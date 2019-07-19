@@ -40,7 +40,6 @@ G:\noah\repository\FH.OAuth\OAuth\bin\Debug\netcoreapp2.2\OAuth.dll
 G:\noah\repository\FH.OAuth\OAuth\bin\Debug\netcoreapp2.2\OAuth.pdb
 G:\noah\repository\FH.OAuth\OAuth\bin\Debug\netcoreapp2.2\OAuth.Views.dll
 G:\noah\repository\FH.OAuth\OAuth\bin\Debug\netcoreapp2.2\OAuth.Views.pdb
-G:\noah\repository\FH.OAuth\OAuth\obj\Debug\netcoreapp2.2\OAuth.csprojAssemblyReference.cache
 G:\noah\repository\FH.OAuth\OAuth\obj\Debug\netcoreapp2.2\OAuth.csproj.CoreCompileInputs.cache
 G:\noah\repository\FH.OAuth\OAuth\obj\Debug\netcoreapp2.2\OAuth.RazorAssemblyInfo.cache
 G:\noah\repository\FH.OAuth\OAuth\obj\Debug\netcoreapp2.2\OAuth.RazorAssemblyInfo.cs

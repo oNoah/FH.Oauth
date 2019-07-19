@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace OAuth
 {
+    /// <summary>
+    /// 修改主键类型
+    /// </summary>
     public class AppRole: IdentityRole<int>
     {
     }
