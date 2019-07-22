@@ -20,12 +20,12 @@ namespace OAuth
 {
     public class Startup
     {
-        public IHostingEnvironment Environment { get; }
+        public IHostingEnvironment Env { get; }
 
-        public Startup(IConfiguration configuration, IHostingEnvironment environment)
+        public Startup(IConfiguration configuration, IHostingEnvironment env)
         {
             Configuration = configuration;
-            Environment = environment;
+            Env = env;
         }
 
 
@@ -96,7 +96,7 @@ namespace OAuth
             
             // 设置属性
             builder.AddProfileService<ProfileService<AppUser>>();
-            if (Environment.IsDevelopment())
+            if (Env.IsDevelopment())
             {
                 builder.AddDeveloperSigningCredential();
             }
@@ -114,7 +114,7 @@ namespace OAuth
                 {
                     path = cerdDir + "/" + cerName;
                 }
-                var cerFile = Path.Combine(Environment.ContentRootPath, path);
+                var cerFile = Path.Combine(Env.ContentRootPath, path);
                 builder.AddSigningCredential(new System.Security.Cryptography.X509Certificates.X509Certificate2(
                     cerFile, Configuration["Certificates:Password"])
                 );
@@ -130,7 +130,7 @@ namespace OAuth
                     options.SignInScheme = "Cookies";
                     options.SaveTokens = true;
 
-                    options.Authority = Configuration["Swagger:Issuer"];
+                    options.Authority = Environment.GetEnvironmentVariable("OAUTH_ISSUER");
                     options.RequireHttpsMetadata = false;
 
                     options.ClientId = "client";
