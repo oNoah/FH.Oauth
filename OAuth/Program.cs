@@ -35,6 +35,11 @@ namespace OAuth
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+                // 认证中心默认5000端口，客户端5010,其他API资源不限制端口，默认80 容器启动的时候指定端口或者随机分配
+                .ConfigureKestrel(options =>
+                {
+                    options.ListenAnyIP(5000);
+                })
                 .UseStartup<Startup>();
     }
 }

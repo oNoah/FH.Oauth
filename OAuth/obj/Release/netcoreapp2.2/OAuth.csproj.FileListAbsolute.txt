@@ -37,3 +37,4 @@ G:\noah\repository\FH.OAuth\OAuth\obj\Release\netcoreapp2.2\OAuth.csproj.CopyCom
 G:\noah\repository\FH.OAuth\OAuth\bin\Release\netcoreapp2.2\Certificate\idsrv4.crt
 G:\noah\repository\FH.OAuth\OAuth\bin\Release\netcoreapp2.2\Certificate\idsrv4.pfx
 G:\noah\repository\FH.OAuth\OAuth\bin\Release\netcoreapp2.2\Certificate\IS4.pfx
+G:\noah\repository\FH.OAuth\OAuth\bin\Release\netcoreapp2.2\Dockerfile

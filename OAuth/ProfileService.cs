@@ -7,6 +7,7 @@ using IdentityServer4.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Logging;
 using OAuth;
+
 /// <summary>
 /// IProfileService to integrate with ASP.NET Identity.
 /// </summary>

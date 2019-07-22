@@ -68,3 +68,8 @@ G:\noah\repository\FH.OAuth\OAuth\obj\Debug\netcoreapp2.2\OAuth.Views.pdb
 G:\noah\repository\FH.OAuth\OAuth\obj\Debug\netcoreapp2.2\OAuth.dll
 G:\noah\repository\FH.OAuth\OAuth\obj\Debug\netcoreapp2.2\OAuth.pdb
 G:\noah\repository\FH.OAuth\OAuth\obj\Debug\netcoreapp2.2\OAuth.csproj.CopyComplete
+G:\noah\repository\FH.OAuth\OAuth\bin\Debug\netcoreapp2.2\certificate\idsrv4.crt
+G:\noah\repository\FH.OAuth\OAuth\bin\Debug\netcoreapp2.2\certificate\idsrv4.pfx
+G:\noah\repository\FH.OAuth\OAuth\bin\Debug\netcoreapp2.2\certificate\IS4.pfx
+G:\noah\repository\FH.OAuth\OAuth\obj\Debug\netcoreapp2.2\OAuth.csprojAssemblyReference.cache
+G:\noah\repository\FH.OAuth\OAuth\bin\Debug\netcoreapp2.2\Dockerfile
